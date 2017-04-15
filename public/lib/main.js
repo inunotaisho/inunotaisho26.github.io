@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap-theme.min.css';
 import angular from 'angular';
 import ngResource from 'angular-resource';
 import ngRoute from 'angular-route';
+import 'font-awesome/css/font-awesome.min.css!';
 import '../../views/home/home.less!';
 import '../../views/education/ed.less!';
 import'../../views/projects/projects.less!';
@@ -38,6 +39,11 @@ angular.module('myApp', ['ngRoute', 'ngResource','navbar'])
         templateUrl:'../../views/contact/contact.html',
         controller: 'contactCtrl',
         controllerUrl: '../../controllers/contact/contact.js'
+    })
+    .when('/login', {
+        templateUrl:'../../views/login/login.html',
+        controller:'loginCtrl',
+        controllerUrl:'../../controllers/login/login.js'
     })
     .otherwise({
         redirectTo: '/'
