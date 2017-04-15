@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="jspm_packages/system.js"></script>
+        <script src="jspm.config.js"></script>
+        <script>
+            System.import('angular-route').then(function(){
+                System.import('public/lib/main.js');
+            }).catch(console.error.bind(console));
+        </script>
+    </head>
+    <body>
+        <ng-view></ng-view>
+    </body>
+</html>
