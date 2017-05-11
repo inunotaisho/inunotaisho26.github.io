@@ -1,12 +1,18 @@
 {
-  "npm:jquery@3.2.1": {
-    "deps": {},
-    "peerDeps": {}
-  },
   "npm:babel-runtime@5.8.38": {
     "deps": {},
     "peerDeps": {
       "core-js": "npm:core-js@^1.2.0",
+      "process": "npm:jspm-nodelibs-process@^0.2.0"
+    }
+  },
+  "npm:jquery@3.2.1": {
+    "deps": {},
+    "peerDeps": {}
+  },
+  "npm:jspm-nodelibs-path@0.2.1": {
+    "deps": {},
+    "peerDeps": {
       "process": "npm:jspm-nodelibs-process@^0.2.0"
     }
   },
@@ -18,28 +24,16 @@
       "process": "npm:jspm-nodelibs-process@^0.2.0"
     }
   },
-  "npm:jspm-nodelibs-fs@0.2.0": {
+  "npm:jspm-nodelibs-process@0.2.0": {
     "deps": {},
     "peerDeps": {}
-  },
-  "npm:jspm-nodelibs-path@0.2.1": {
-    "deps": {},
-    "peerDeps": {
-      "process": "npm:jspm-nodelibs-process@^0.2.0"
-    }
   },
   "npm:systemjs-plugin-babel@0.0.17": {
     "deps": {},
     "peerDeps": {}
   },
-  "npm:jspm-nodelibs-process@0.2.0": {
+  "npm:jspm-nodelibs-fs@0.2.0": {
     "deps": {},
-    "peerDeps": {}
-  },
-  "github:angular/bower-angular-route@1.5.8": {
-    "deps": {
-      "angular": "github:angular/bower-angular@^1.3.0"
-    },
     "peerDeps": {}
   },
   "github:angular/bower-angular-resource@1.5.8": {
@@ -50,6 +44,12 @@
   },
   "github:angular/bower-angular@1.5.8": {
     "deps": {},
+    "peerDeps": {}
+  },
+  "github:angular/bower-angular-route@1.5.8": {
+    "deps": {
+      "angular": "github:angular/bower-angular@^1.3.0"
+    },
     "peerDeps": {}
   }
 }
