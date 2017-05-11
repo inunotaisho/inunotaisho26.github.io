@@ -1,49 +1,46 @@
 import $ from 'jquery';
-import bootstrap from 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css!';
-import 'bootstrap/dist/css/bootstrap-theme.min.css';
 import angular from 'angular';
 import ngResource from 'angular-resource';
 import ngRoute from 'angular-route';
-import 'font-awesome/css/font-awesome.min.css!';
-import '../../views/home/home.less!';
-import '../../views/education/ed.less!';
-import'../../views/projects/projects.less!';
-import'../../views/contact/contact.less!';
-import navbar from '../../directives/navbar.js';
+import navbar from '../../src/views/navbar/navbar.dir.js';
 
 angular.module('myApp', ['ngRoute', 'ngResource','navbar'])
 .config(($routeProvider, $locationProvider) => {
     $routeProvider
     .when('/', {
-        templateUrl: '../../views/home/home.html',
+        templateUrl: '../../src/views/home/home.vc.html',
         controller: 'homeCtrl',
-        controllerUrl: '../../controllers/home/home.js'
+        controllerUrl: '../../src/views/home/home.vc.js'
     })
     .when('/education', {
-        templateUrl: '../../views/education/ed.html',
+        templateUrl: '../../src/views/education/ed.vc.html',
         controller: 'edCtrl',
-        controllerUrl:  '../../controllers/education/ed.js'
+        controllerUrl:  '../../src/views/education/ed.vc.js'
     })
     .when('/projects', {
-        templateUrl: '../../views/projects/projects.html',
+        templateUrl: '../../src/views/projects/projects.vc.html',
         controller: 'projCtrl',
-        controllerUrl: '../../controllers/projects/projects.js'
+        controllerUrl: '../../src/views/projects/projects.vc.js'
     })
     .when('/blog', {
-        templateUrl:'../../views/blog/blog.html',
+        templateUrl:'../../src/views/blog/blog.vc.html',
         controller: 'blogCtrl',
-        controllerUrl: '../../controllers/blog/blog.js'
-    })
-    .when('/contact', {
-        templateUrl:'../../views/contact/contact.html',
-        controller: 'contactCtrl',
-        controllerUrl: '../../controllers/contact/contact.js'
+        controllerUrl: '../../src/views/blog/blog.vc.js'
     })
     .when('/login', {
-        templateUrl:'../../views/login/login.html',
+        templateUrl:'../../src/views/login/login.vc.html',
         controller:'loginCtrl',
-        controllerUrl:'../../controllers/login/login.js'
+        controllerUrl:'../../src/views/login/login.vc.js'
+    })
+    .when('/write', {
+        templateUrl:'../../src/views/write/write.vc.html',
+        controller:'writeCtrl',
+        controllerUrl:'../../src/views/write/write.vc.js'
+    })
+    .when('/contact', {
+        templateUrl:'../../src/views/contact/contact.vc.html',
+        controller: 'contactCtrl',
+        controllerUrl: '../../src/views/contact/contact.vc.js'
     })
     .otherwise({
         redirectTo: '/'
@@ -51,5 +48,5 @@ angular.module('myApp', ['ngRoute', 'ngResource','navbar'])
 });
 
 
-angular.bootstrap(document, ['myApp']);
+angular.bootstrap(document, ['myApp', 'navbarCtrl']);
 

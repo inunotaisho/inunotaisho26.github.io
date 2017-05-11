@@ -1,18 +1,14 @@
 {
-  "name": "inunotaisho26.github.com",
+  "name": "inunotaisho26.github.io",
   "version": "0.1.0",
   "description": "This is the packagejson for Ethan Fairweather's professional website version 2. This is also MEAN stack in nature. Will probably be written in Angular 2 or JS will be the fallback if need be.",
-  "main": "inunotaisho26.github.com.js",
+  "main": "inunotaisho26.github.io.js",
   "jspm": {
     "dependencies": {
       "angular": "github:angular/bower-angular@^1.5.8",
       "angular-resource": "github:angular/bower-angular-resource@^1.5.8",
       "angular-route": "github:angular/bower-angular-route@^1.5.8",
-      "bootstrap": "github:twbs/bootstrap@3.3.6",
-      "css": "github:systemjs/plugin-css@^0.1.32",
-      "font-awesome": "npm:font-awesome@^4.7.0",
-      "jquery": "npm:jquery@^3.1.0",
-      "less": "github:systemjs/plugin-less@^0.1.2"
+      "jquery": "npm:jquery@^3.1.0"
     },
     "devDependencies": {
       "babel-runtime": "npm:babel-runtime@^5.8.24",
@@ -62,56 +58,12 @@
           }
         }
       },
-      "github:twbs/bootstrap@3.3.6": {
-        "shim": {
-          "js/bootstrap": {
-            "deps": [
-              "jquery"
-            ],
-            "exports": "$"
-          }
-        },
-        "dependencies": {
-          "jquery": "2"
-        },
-        "files": [
-          "dist",
-          "fonts",
-          "js",
-          "css",
-          "less",
-          "grunt",
-          "LICENSE"
-        ],
-        "systemjs": {
-          "main": "dist/js/bootstrap.js",
-          "modules": {
-            "dist/js/bootstrap.js": {
-              "deps": [
-                "jquery"
-              ],
-              "exports": "$"
-            }
-          }
-        }
-      },
       "npm:babel-runtime@5.8.38": {
         "main": false,
         "dependencies": {},
         "optionalDependencies": {
           "core-js": "^1.2.0"
         }
-      },
-      "npm:font-awesome@4.7.0": {
-        "main": "css/font-awesome.css!",
-        "jspmNodeConversion": false,
-        "registry": "jspm",
-        "dependencies": {
-          "css": "0.1"
-        }
-      },
-      "npm:jquery@2.2.4": {
-        "format": "amd"
       },
       "npm:jquery@3.1.1": {
         "format": "amd"
@@ -120,20 +72,66 @@
   },
   "devDependencies": {
     "lite-server": "latest",
-    "nodemon": "latest"
+    "nodemon": "latest",
+    "watchify": "^3.9.0"
   },
   "dependencies": {
+    "angular": "^1.6.4",
+    "angular-resource": "^1.6.4",
+    "angular-route": "^1.6.4",
+    "babel-cli": "^6.24.1",
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.1",
+    "bootstrap": "^3.3.7",
+    "browserify": "^14.3.0",
+    "cluster": "^0.7.7",
+    "concurrently": "^3.4.0",
+    "connect-redis": "^3.2.0",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.2",
+    "express-session": "^1.15.2",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
     "jspm": "^0.17.0-beta.32",
-    "less": "latest"
+    "less": "^2.7.2",
+    "less-plugin-clean-css": "^1.5.1",
+    "lodash": "^4.17.4",
+    "minifyify": "^7.3.5",
+    "mkdirp": "^0.5.1",
+    "os": "^0.1.1",
+    "path": "^0.12.7",
+    "pg": "^6.1.5",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.30.4",
+    "stringify": "^5.1.0"
   },
   "scripts": {
+    "babel": "babel -o src/app/main.js > src/app/app.js",
+    "browserify": "browserify src/app/app.js -d -t stringify -o src/dist/app.js -v -p [minifyify --no-map]",
+    "bundle": "mkdirp src/dist && concurrently -r -k \"npm run babel\" \"npm run browserify \" \" npm run less\"",
+    "clean": "rimraf app/**/*.css app/src/**/*.js app/dist/*",
+    "clean:dist": "rimraf app/dist/*",
     "postinstall": "jspm install",
-    "dev": "lite-server -c bs-config.json && NODE_ENV=development nodemon"
+    "less": "mkdirp src/dist && lessc src/styles/main.less > src/dist/app.css --clean-css=\"--s0 --advanced\"",
+    "dev": "nodemon ./lib/app.js",
+    "prestart": "npm run less",
+    "start": "lite-server -c bs-config.json && NODE_ENV=development nodemon",
+    "watch": "babel && concurrently -r -k \"npm run watch:bundle\" \"npm run watch:less\"",
+    "watch:bundle": "mkdirp app/dist && watchify public/lib/main.js -d -t stringify -o src/dist/app.js -v",
+    "watch:less": "nodemon -q -w app -e less --exec npm run less"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/inunotaisho26/inunotaisho26.github.com.git"
   },
+  "keywords": [
+    "example",
+    "fullstack",
+    "postgres",
+    "inunotaisho26",
+    "犬の大将",
+    "晴天イタン"
+  ],
   "author": "Ethan Burrow Fairweather",
   "license": "ISC",
   "bugs": {

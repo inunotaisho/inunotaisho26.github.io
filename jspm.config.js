@@ -68,11 +68,7 @@ SystemJS.config({
     "angular": "github:angular/bower-angular@1.5.8",
     "angular-resource": "github:angular/bower-angular-resource@1.5.8",
     "angular-route": "github:angular/bower-angular-route@1.5.8",
-    "bootstrap": "github:twbs/bootstrap@3.3.6",
-    "css": "github:systemjs/plugin-css@0.1.33",
-    "font-awesome": "npm:font-awesome@4.7.0",
-    "jquery": "npm:jquery@3.1.1",
-    "less": "github:systemjs/plugin-less@0.1.2"
+    "jquery": "npm:jquery@3.1.1"
   },
   packages: {
     "github:angular/bower-angular-resource@1.5.8": {
@@ -83,21 +79,6 @@ SystemJS.config({
     "github:angular/bower-angular-route@1.5.8": {
       "map": {
         "angular": "github:angular/bower-angular@1.5.8"
-      }
-    },
-    "github:systemjs/plugin-less@0.1.2": {
-      "map": {
-        "css": "github:systemjs/plugin-css@0.1.30"
-      }
-    },
-    "npm:font-awesome@4.7.0": {
-      "map": {
-        "css": "github:systemjs/plugin-css@0.1.33"
-      }
-    },
-    "github:twbs/bootstrap@3.3.6": {
-      "map": {
-        "jquery": "npm:jquery@2.2.4"
       }
     }
   }

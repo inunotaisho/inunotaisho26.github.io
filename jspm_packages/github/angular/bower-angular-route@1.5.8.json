@@ -1,0 +1,11 @@
+{
+  "main": "angular-route",
+  "meta": {
+    "angular-route.js": {
+      "deps": [
+        "angular"
+      ],
+      "format": "global"
+    }
+  }
+}
