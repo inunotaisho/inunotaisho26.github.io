@@ -112,7 +112,7 @@
     "clean": "rimraf app/**/*.css app/src/**/*.js app/dist/*",
     "clean:dist": "rimraf app/dist/*",
     "postinstall": "jspm install",
-    "less": "mkdirp src/dist && lessc src/styles/main.less > src/dist/app.css --clean-css=\"--s0 --advanced\"",
+    "less": "lessc src/styles/main.less > ./app.css --clean-css=\"--s0 --advanced\"",
     "dev": "nodemon ./lib/app.js",
     "prestart": "npm run less",
     "start": "lite-server -c bs-config.json && NODE_ENV=development nodemon",
