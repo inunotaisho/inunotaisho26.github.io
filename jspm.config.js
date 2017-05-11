@@ -68,8 +68,9 @@ SystemJS.config({
     "angular": "github:angular/bower-angular@1.5.8",
     "angular-resource": "github:angular/bower-angular-resource@1.5.8",
     "angular-route": "github:angular/bower-angular-route@1.5.8",
+    "bootstrap": "github:twbs/bootstrap@3.3.7",
     "css": "github:systemjs/plugin-css@0.1.33",
-    "jquery": "npm:jquery@3.1.1"
+    "jquery": "npm:jquery@3.2.1"
   },
   packages: {
     "github:angular/bower-angular-resource@1.5.8": {
@@ -80,6 +81,11 @@ SystemJS.config({
     "github:angular/bower-angular-route@1.5.8": {
       "map": {
         "angular": "github:angular/bower-angular@1.5.8"
+      }
+    },
+    "github:twbs/bootstrap@3.3.7": {
+      "map": {
+        "jquery": "npm:jquery@3.2.1"
       }
     }
   }
