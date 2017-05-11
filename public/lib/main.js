@@ -1,8 +1,4 @@
 import $ from 'jquery';
-import bootstrap from 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css!';
-import 'bootstrap/dist/css/bootstrap-theme.min.css!';
-import 'font-awesome/css/font-awesome.min.css!';
 import angular from 'angular';
 import ngResource from 'angular-resource';
 import ngRoute from 'angular-route';

@@ -36,10 +36,6 @@
     "deps": {},
     "peerDeps": {}
   },
-  "github:systemjs/plugin-css@0.1.33": {
-    "deps": {},
-    "peerDeps": {}
-  },
   "github:angular/bower-angular-route@1.5.8": {
     "deps": {
       "angular": "github:angular/bower-angular@^1.3.0"
@@ -54,12 +50,6 @@
   },
   "github:angular/bower-angular@1.5.8": {
     "deps": {},
-    "peerDeps": {}
-  },
-  "github:twbs/bootstrap@3.3.7": {
-    "deps": {
-      "jquery": "npm:jquery"
-    },
     "peerDeps": {}
   }
 }
