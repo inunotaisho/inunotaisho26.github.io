@@ -51,5 +51,9 @@
       "angular": "github:angular/bower-angular@^1.4.8"
     },
     "peerDeps": {}
+  },
+  "github:systemjs/plugin-css@0.1.33": {
+    "deps": {},
+    "peerDeps": {}
   }
 }

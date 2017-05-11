@@ -68,6 +68,7 @@ SystemJS.config({
     "angular": "github:angular/bower-angular@1.5.8",
     "angular-resource": "github:angular/bower-angular-resource@1.5.8",
     "angular-route": "github:angular/bower-angular-route@1.5.8",
+    "css": "github:systemjs/plugin-css@0.1.33",
     "jquery": "npm:jquery@3.1.1"
   },
   packages: {
