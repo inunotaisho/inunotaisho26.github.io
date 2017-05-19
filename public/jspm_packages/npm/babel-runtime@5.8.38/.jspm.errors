@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 MultipleErrors: /Users/Ethan-Fairweather/.jspm/packages/npm/babel-runtime@5.8.38/helpers/typeof-react-element.js:5:63: Unexpected token "for"
 /Users/Ethan-Fairweather/.jspm/packages/npm/babel-runtime@5.8.38/helpers/typeof-react-element.js:5:80: Unexpected token "for"
+=======
+MultipleErrors: /Users/ethanfairweather/.jspm/packages/npm/babel-runtime@5.8.38/helpers/typeof-react-element.js:5:63: Unexpected token "for"
+/Users/ethanfairweather/.jspm/packages/npm/babel-runtime@5.8.38/helpers/typeof-react-element.js:5:80: Unexpected token "for"
+>>>>>>> 73fb9ec1e4fbcc8c4a37a744101531d8d4eef078
